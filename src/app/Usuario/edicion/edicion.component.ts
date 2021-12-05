@@ -32,9 +32,7 @@ export class EdicionComponent implements OnInit {
     .subscribe(data=>{
       this.usuario=data;
       alert("SE ACTUALIZO EL REGISTRO EXITOSAMENTE");
-      this.router.navigate(['listado']);
-      
-
+     // this.router.navigate(['/listado']);
 
     })
   }

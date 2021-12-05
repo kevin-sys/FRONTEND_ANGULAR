@@ -21,5 +21,12 @@ export class ListadoComponent implements OnInit {
     localStorage.setItem("id",usuario.id.toString());
     this.router.navigate(["edicion"]);
   }
+  Delete(usuario:Usuario){
+    this.service.deleteUsuario(usuario)
+    .subscribe(data=>{
+      this.usuarios=this.usuarios.filter(p=>p!==usuario);
+      alert("USUARIO ELIMINADO SATISFACTORIAMENTE");
+    })
+  }
 
 }
