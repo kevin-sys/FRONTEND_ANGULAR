@@ -17,5 +17,9 @@ export class ListadoComponent implements OnInit {
       this.usuarios=data;
     })
   }
+  Editar(usuario:Usuario):void{
+    localStorage.setItem("id",usuario.id.toString());
+    this.router.navigate(["edicion"]);
+  }
 
 }

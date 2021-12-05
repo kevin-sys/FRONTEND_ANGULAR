@@ -17,7 +17,7 @@ export class CreacionComponent implements OnInit {
   
   Guardar(){
     this.service.CreateUsuario(this.usuario).subscribe(data=>{
-      alert("Se ha agregado con exito al usuario "+ this.usuario.nombres);
+      alert("SE REGISTRÓ EXITOSAMENTE EL USUARIO: "+ this.usuario.nombres);
      //this.router.navigate(["listado"]);
     });
   }
